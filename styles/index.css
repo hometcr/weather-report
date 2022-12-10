@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#temp {
+    font-size:60px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: black;
+    display: inline-block;
+}
+
+#landscape {
+    max-width: 50%;
+    height: auto;
+}
+
+#top_container {
+    background-color: rgb(63, 123, 116);
+    height: 100px;
+    width: 100vw;
+    display:grid;
+    grid-template-columns: 400px 1fr 100px 2fr;
+}
+
+#title{
+    color: white;
+    font-size: 30px;
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search_word{
+    background-color: red;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search_bar{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page_container{
+    height: calc(100vh - 100px);
+    width: 100vw;
+    display:grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr 2fr 2fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr 2fr 2fr 1fr 0.5fr;
+    background-color: chocolate;
+}
+
+#city{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#temp{
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#down_arrow{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: darksalmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#up_arrow{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: mediumpurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#choose_sky{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    background-color: lightslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sky_dropdown{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sky{
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ground{
+    grid-row-start: 5;
+    grid-row-end: 8;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    background-color: maroon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
