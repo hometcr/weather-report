@@ -52,7 +52,7 @@
 }
 
 
-#search_bar{
+#search_bar_section{
     grid-column-start: 4;
     grid-column-end: 5;
     background-color: blueviolet;
@@ -63,13 +63,18 @@
     padding-left: 5px;
 }
 
+
+#mag_glass{
+    max-height: 30px;
+}
+
 #page_container{
     height: calc(100vh - 70px);
     width: 100vw;
     display:grid;
     grid-template-columns: 50px 0.5fr 0.5fr 50px 300px 300px 70px;
     grid-template-rows: 50px 50px 50px 50px 130px 80px 200px 50px;
-    background-color: darkgreen;
+    background-color: beige;
 }
 
 #city{

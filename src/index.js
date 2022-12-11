@@ -1,11 +1,11 @@
 
 
 const currentState = {
-    city: "dallas",
+    city: "Herndon",
     latitude: 38.9696,
     longitude: 77.3861,
     temp: 72,
-    weather: "snowy"
+    weather: "sunny"
 }
 
 const getWeatherFromCity = () => {
@@ -18,13 +18,12 @@ const getWeatherFromCity = () => {
         .then((response) => {
             currentState.latitude = response.data[0]['lat'];
             currentState.longitude = response.data[0]['lon'];
-            console.log(`latitude is ${currentState.latitude}`);
-            console.log(`longitude is ${currentState.longitude}`);
+            console.log(`getting weather for ${currentState.city}`)
             getWeatherFromCoords();
 
         })
         .catch((error) => {
-            console.log('I found an error!')
+            console.log(`error getting coords from ${currentState.city}`)
             console.log(error)
         });
     }
@@ -50,6 +49,9 @@ const changeTempColor = (tempStr) => {
 
     return color;
 }
+
+
+
 
 
 const changeLandscape = (temp) => {
@@ -100,6 +102,7 @@ const getWeatherFromCoords = () => {
             // get temp and update
             kelvinTemp = response.data["main"]["temp"]
             tempDegF = kelvinToDegF(kelvinTemp)
+            console.log(`finding temp as from ${currentState.city} as ${tempDegF}`)
             updateTemp(tempDegF);
 
             // get weather and update
@@ -108,7 +111,7 @@ const getWeatherFromCoords = () => {
             updateSky(weather);
         })
         .catch((error) => {
-            console.log(error)
+            console.log(`error getting weather from coors for ${currentState.city}`)
         })
 }
 
@@ -127,9 +130,12 @@ const updateTemp = (temp) => {
 
 const updateCity = (city) => {
     city = capitalizeFirstLetter(city)
+    console.log(`updating ${city}`)
     const currentCity = document.getElementById('city');
     currentCity.textContent = city
-    getWeatherFromCity()
+    currentState.city = city
+    getWeatherFromCity();
+    updateTemp(currentState.temp);
 }
 
 
@@ -164,8 +170,17 @@ const selectElement = (id, valueToSelect) => {
     element.value = valueToSelect;
 }
 
+const testing = () => {
+    console.log("this test is going somewhere")
+}
+
 const registerEventHandlers = () => {
-    getWeatherFromCity()
+
+    const searchBar = document.getElementById("search_bar")
+    searchBar.value = ""
+
+    const currentCity = document.getElementById('city');
+    updateCity(currentCity.textContent)
 
     const raiseTempButton = document.getElementById('up_arrow');
     raiseTempButton.addEventListener('click', raiseTemp)
@@ -174,20 +189,25 @@ const registerEventHandlers = () => {
     lowerTempButton.addEventListener('click', lowerTemp)
 
     const skyOptions = document.getElementById("sky_options")
-    sky_options.addEventListener('change', changeSky = (event) => {
+    skyOptions.addEventListener('change', changeSky = (event) => {
         updateSky(event.target.value)
     })
     
+    const magGlass = document.getElementById("mag_glass")
+    magGlass.addEventListener('click', test = (event) => {
+        console.log("clicking now")
+        let newCity = searchBar.value
+        console.log(newCity)
+        updateCity(newCity)
+        // window.location.reload()
+    })
+    
+    
 
 
-    // call functions to always run
-    // updateCityName();
 
 
-    // call functions to run on events
-    // const currentTempButton = document.getElementById('currentTempButton');
-    // currentTempButton.addEventListener('click', findLatAndLong);
-
+    
 };
 
 
