@@ -1,7 +1,7 @@
 
 
 const currentState = {
-    city: "arlington",
+    city: "dallas",
     latitude: 38.9696,
     longitude: 77.3861,
     temp: 72,
@@ -59,9 +59,9 @@ const changeLandscape = (temp) => {
     } else if (temp < 75) {
         currentLandscape.src = "assets/green-landscape.jpg"
     } else if (temp < 90) {
-        currentLandscape.src = "assets/palm-landscape.jpg"
+        currentLandscape.src = "assets/beach-landscape.jpg"
     } else {
-        currentLandscape.src = "assets/desert-landscape.jpg"
+        currentLandscape.src = "assets/desert-landscape copy.jpg"
     }
 }
 
@@ -73,7 +73,7 @@ const updateSky = (weather) => {
         selectElement("sky_options", "snowy");
     } else if (weather.includes("cloud")) {
         currentState.weather = "cloudy"
-        currentSky.src = "assets/cloudy-sky.png"
+        currentSky.src = "assets/cloudy-sky.jpg"
         selectElement("sky_options", "cloudy");
     } else if (weather.includes("rain") || weather.includes("storm")) {
         currentState.weather = "rainy"
