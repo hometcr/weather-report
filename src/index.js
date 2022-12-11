@@ -1,7 +1,7 @@
 
 
 const currentState = {
-    city: "herndon",
+    city: "arlington",
     latitude: 38.9696,
     longitude: 77.3861,
     temp: 72,

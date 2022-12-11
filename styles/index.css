@@ -45,6 +45,13 @@
     min-width: 100px;
 }
 
+
+#search_word::after {
+    content: "";
+    padding-right: 5pt;
+}
+
+
 #search_bar{
     grid-column-start: 4;
     grid-column-end: 5;
@@ -53,6 +60,7 @@
     justify-content: flex-start;
     align-items: center;
     min-width: 200px;
+    padding-left: 5px;
 }
 
 #page_container{
@@ -90,7 +98,7 @@
     min-width: 150px;
 }
 
-#down_arrow{
+#down_arrow_area{
     grid-row-start: 6;
     grid-row-end: 7;
     grid-column-start: 2;
@@ -101,9 +109,10 @@
     align-items: center;
     font-size: 50px;
     min-width: 85px;
+    padding-right: 5px;
 }
 
-#up_arrow{
+#up_arrow_area{
     grid-row-start: 6;
     grid-row-end: 7;
     grid-column-start: 3;
@@ -114,6 +123,7 @@
     align-items: center;
     font-size: 50px;
     min-width: 85px;
+    padding-left: 5px;
 }
 
 #choose_sky{
@@ -126,6 +136,7 @@
     justify-content: flex-end;
     align-items: center;
     min-height: 40px;
+    padding-right: 5px;
 }
 
 #sky_dropdown{
@@ -138,6 +149,7 @@
     justify-content: flex-start;
     align-items: center;
     min-height: 40px;
+    padding-left: 5px;
 }
 
 #sky{
