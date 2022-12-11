@@ -7,6 +7,7 @@
     <title>Weather Report</title>
     <link href="styles/index.css" rel="stylesheet" />
     <script src="./node_modules/axios/dist/axios.min.js"></script>
+
 </head>
 <body>
     <main>
@@ -25,12 +26,12 @@
             <span id="city">
                 Herndon
             </span>
-            <span id="temp">98°</span>
+            <span id="temp"></span>
             <span id="down_arrow">
-                down arrow
+                ⬇️
             </span>
             <span id="up_arrow">
-                up arrow
+                ⬆️
             </span>
             <span id="choose_sky">
                 choose sky:
@@ -39,14 +40,13 @@
                 sky dropdown
             </span>
             <span id="sky">
-                sky will go here
+                <img id="sky_photo" src="assets/snowy-sky-1.jpg">
             </span>
-            <span id="ground">
-                landscape
-            </span>
+            <section id="ground">
+                <img id="landscape_photo" src="assets/green-landscape.jpg">
+            </section>
         </section>
     </main>
-
 </body>
 <script src="src/index.js" type="text/javascript"></script>
 </html>

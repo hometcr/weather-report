@@ -18,7 +18,7 @@
 
 #top_container {
     background-color: rgb(63, 123, 116);
-    height: 100px;
+    height: 70px;
     width: 100vw;
     display:grid;
     grid-template-columns: 400px 1fr 100px 2fr;
@@ -42,6 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 100px;
 }
 
 #search_bar{
@@ -51,26 +52,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 200px;
 }
 
 #page_container{
-    height: calc(100vh - 100px);
+    height: calc(100vh - 70px);
     width: 100vw;
     display:grid;
-    grid-template-columns: 0.5fr 2fr 2fr 0.5fr 2fr 2fr 0.5fr;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr 1fr 2fr 2fr 1fr 0.5fr;
-    background-color: chocolate;
+    grid-template-columns: 50px 0.5fr 0.5fr 50px 300px 300px 70px;
+    grid-template-rows: 50px 50px 50px 50px 130px 80px 200px 50px;
+    background-color: darkgreen;
 }
 
 #city{
+    font-size: 40px;
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 4;
-    background-color: chartreuse;
+    background-color:teal;
+    color:white;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 170px;
 }
 
 #temp{
@@ -82,6 +87,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 150px;
 }
 
 #down_arrow{
@@ -91,8 +97,10 @@
     grid-column-end: 3;
     background-color: darksalmon;
     display: flex;
-    justify-content: center;
+    justify-content:flex-end;
     align-items: center;
+    font-size: 50px;
+    min-width: 85px;
 }
 
 #up_arrow{
@@ -102,8 +110,10 @@
     grid-column-end: 4;
     background-color: mediumpurple;
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
+    font-size: 50px;
+    min-width: 85px;
 }
 
 #choose_sky{
@@ -115,6 +125,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 40px;
 }
 
 #sky_dropdown{
@@ -126,6 +137,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 40px;
 }
 
 #sky{
@@ -144,9 +156,21 @@
     grid-row-end: 8;
     grid-column-start: 5;
     grid-column-end: 7;
-    background-color: maroon;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* make this the background color */
+    background-color: darkgreen;
 }
 
+#landscape_photo{
+    object-fit:cover;
+    height: 100%;
+    max-width: 100%;
+}
+
+#sky_photo{
+    object-fit:cover;
+    height: 100%;
+    max-width: 100%;
+}
