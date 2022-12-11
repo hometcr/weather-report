@@ -40,7 +40,7 @@
     grid-column-start: 3;
     grid-column-end: 4;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     min-width: 100px;
 }
@@ -50,7 +50,7 @@
     grid-column-end: 5;
     background-color: blueviolet;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-width: 200px;
 }
@@ -123,7 +123,7 @@
     grid-column-end: 6;
     background-color: lightslategray;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     min-height: 40px;
 }
@@ -135,7 +135,7 @@
     grid-column-end: 7;
     background-color: yellow;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 40px;
 }

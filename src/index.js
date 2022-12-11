@@ -1,7 +1,7 @@
 
 
 const currentState = {
-    city: "london",
+    city: "herndon",
     latitude: 38.9696,
     longitude: 77.3861,
     temp: 72,
@@ -70,15 +70,19 @@ const updateSky = (weather) => {
     if (weather.includes("snow")) {
         currentState.weather = "snowy"
         currentSky.src = "assets/snowy-sky-1.jpg"
+        selectElement("sky_options", "snowy");
     } else if (weather.includes("cloud")) {
         currentState.weather = "cloudy"
         currentSky.src = "assets/cloudy-sky.png"
+        selectElement("sky_options", "cloudy");
     } else if (weather.includes("rain") || weather.includes("storm")) {
         currentState.weather = "rainy"
         currentSky.src = "assets/stormy-sky-1.jpg"
+        selectElement("sky_options", "rainy");
     } else {
         currentState.weather = "sunny"
         currentSky.src = "assets/sunny-sky-1.jpg"
+        selectElement("sky_options", "sunny");
     }
 }
 
@@ -155,6 +159,11 @@ const lowerTemp = () => {
     updateTemp(newTemp);
 }
 
+const selectElement = (id, valueToSelect) => {    
+    let element = document.getElementById(id);
+    element.value = valueToSelect;
+}
+
 const registerEventHandlers = () => {
     getWeatherFromCity()
 
@@ -164,7 +173,13 @@ const registerEventHandlers = () => {
     const lowerTempButton = document.getElementById('down_arrow');
     lowerTempButton.addEventListener('click', lowerTemp)
 
+    const skyOptions = document.getElementById("sky_options")
+    sky_options.addEventListener('change', changeSky = (event) => {
+        updateSky(event.target.value)
+    })
     
+
+
     // call functions to always run
     // updateCityName();
 
