@@ -195,7 +195,7 @@ const registerEventHandlers = () => {
     
     // update page when mag glass is clicked
     const magGlass = document.getElementById("mag_glass")
-    magGlass.addEventListener('click', updatePage = (event) => {
+    magGlass.addEventListener('click', updatePage = () => {
         let newCity
         // if search bar is empty, reset page for current city (wave 6)
         if (searchBar.value === "") {
