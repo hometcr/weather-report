@@ -4,7 +4,7 @@ const currentState = {
     city: "Herndon",
     latitude: 38.9696,
     longitude: 77.3861,
-    temp: 72,
+    temp: 50,
     weather: "sunny"
 }
 
@@ -41,12 +41,10 @@ const getWeatherFromCity = () => {
                 }
             })
             .then((response) => {
-                console.log(response);
-    
                 // get temp and update
                 kelvinTemp = response.data["main"]["temp"]
                 tempDegF = kelvinToDegF(kelvinTemp)
-                console.log(`finding temp as from ${currentState.city} as ${tempDegF}`)
+                console.log(`finding temp from ${currentState.city} as ${tempDegF}`)
                 updateTemp(tempDegF);
     
                 // get weather and update
@@ -82,7 +80,6 @@ const selectElement = (id, valueToSelect) => {
 ////////// functions to update site //////////
 const updateCity = (city) => {
     city = capitalizeFirstLetter(city)
-    console.log(`updating ${city}`)
     const currentCity = document.getElementById('city');
     currentCity.textContent = city
     currentState.city = city
@@ -176,21 +173,21 @@ const updateLandscape = (temp) => {
 
 const registerEventHandlers = () => {
 
-    // reset search bar when page is reloaded
+    // reset search bar when page is reloaded (wave 3)
     const searchBar = document.getElementById("search_bar")
     searchBar.value = ""
 
-    // fill site based on current city
+    // fill site based on current city (wave 2)
     const currentCity = document.getElementById('city');
     updateCity(currentCity.textContent)
 
-    // update temp when arrow buttons are click
+    // update temp when arrow buttons are click (wave 2)
     const raiseTempButton = document.getElementById('up_arrow');
     raiseTempButton.addEventListener('click', raiseTemp)
     const lowerTempButton = document.getElementById('down_arrow');
     lowerTempButton.addEventListener('click', lowerTemp)
 
-    // update sky when drop-down selection is changed
+    // update sky when drop-down selection is changed (wave 5)
     const skyOptions = document.getElementById("sky_options")
     skyOptions.addEventListener('change', changeSky = (event) => {
         updateSky(event.target.value)
@@ -200,10 +197,10 @@ const registerEventHandlers = () => {
     const magGlass = document.getElementById("mag_glass")
     magGlass.addEventListener('click', updatePage = (event) => {
         let newCity
-        // if search bar is empty, reset page for current city
+        // if search bar is empty, reset page for current city (wave 6)
         if (searchBar.value === "") {
             newCity = currentCity.textContent
-        // if search bar is full, update page for new city
+        // if search bar is full, update page for new city (wave 4)
         } else {
             newCity = searchBar.value
         }
