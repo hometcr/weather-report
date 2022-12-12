@@ -1,37 +1,15 @@
 * {
     padding: 0;
     margin: 0;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-#temp {
-    font-size:60px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: #8c7b94;
-    /* border-color: #54445c; */
-    grid-row-start: 4;
-    grid-row-end: 6;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    background-color: #beb3c4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 150px;
-}
-
-#landscape {
-    max-width: 50%;
-    height: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #top_container {
     background-color: #4b6b57;
     height: 70px;
     width: 100vw;
-    display:grid;
-    grid-template-columns: 400px 1fr 100px 2fr;
+    display: grid;
+    grid-template-columns: 400px 1fr 100px 275px;
 }
 
 #title{
@@ -77,9 +55,8 @@
 
 #search_bar{
     height: 30px;
-    font-size:medium;
+    font-size: medium;
 }
-
 
 #mag_glass{
     height: 32px;
@@ -88,10 +65,10 @@
 #page_container{
     height: calc(100vh - 70px);
     width: 100vw;
-    display:grid;
+    display: grid;
     grid-template-columns: 50px 0.5fr 0.5fr 50px 300px 300px 70px;
     grid-template-rows: 50px 50px 50px 50px 130px 80px 200px 50px;
-    background-color: #bfcfbe;
+    background-color: #c9c9c7;;
 }
 
 #city{
@@ -100,7 +77,7 @@
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 4;
-    background-color:#8c7b94;
+    background-color: #8c7b94;
     color:white;
     display: flex;
     justify-content: center;
@@ -108,14 +85,28 @@
     min-width: 170px;
 }
 
-
+#temp {
+    font-size:60px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #8c7b94;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: #beb3c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+}
 
 #down_arrow_area{
     grid-row-start: 6;
     grid-row-end: 7;
     grid-column-start: 2;
     grid-column-end: 3;
-    background-color:#bfcfbe;
+    background-color: #c9c9c7;
     display: flex;
     justify-content:flex-end;
     align-items: center;
@@ -129,9 +120,9 @@
     grid-row-end: 7;
     grid-column-start: 3;
     grid-column-end: 4;
-    background-color:#bfcfbe;
+    background-color: #c9c9c7;
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
     font-size: 50px;
     min-width: 85px;
@@ -192,18 +183,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* make this the background color */
     background-color: darkgreen;
 }
 
 #landscape_photo{
-    object-fit:cover;
+    object-fit: cover;
     height: 100%;
     max-width: 100%;
 }
 
 #sky_photo{
-    object-fit:cover;
+    object-fit: cover;
     height: 100%;
     max-width: 100%;
 }
