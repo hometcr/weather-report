@@ -36,15 +36,15 @@ const changeTempColor = (tempStr) => {
 
     let color;
     if (temp < 20) {
-        color = "lightblue";
+        color = "#482e5c";
     } else if (temp < 40) {
-        color = "blue";
+        color = "#2c4485";
     } else if (temp < 60) {
-        color = "green"
+        color = "#396344"
     } else if (temp < 80) {
-        color = "orange"
-    } else if (temp < 100) {
-        color = "red"
+        color = "#665542"
+    } else {
+        color = "#824146"
     };
 
     return color;
@@ -196,10 +196,14 @@ const registerEventHandlers = () => {
     const magGlass = document.getElementById("mag_glass")
     magGlass.addEventListener('click', test = (event) => {
         console.log("clicking now")
-        let newCity = searchBar.value
-        console.log(newCity)
+        let newCity
+        if (searchBar.value === "") {
+            newCity = currentCity.textContent
+        } else {
+            newCity = searchBar.value
+        }
+
         updateCity(newCity)
-        // window.location.reload()
     })
     
     
