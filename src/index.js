@@ -45,19 +45,20 @@ const getWeatherFromCity = () => {
             })
             .then((response) => {
                 // get temp and update
-                kelvinTemp = response.data["main"]["temp"]
-                tempDegF = kelvinToDegF(kelvinTemp)
+                let kelvinTemp = response.data["main"]["temp"]
+                let tempDegF = kelvinToDegF(kelvinTemp)
                 console.log(`finding temp from ${currentState.city} as ${tempDegF}`)
                 updateTemp(tempDegF);
     
                 // get weather and update
-                weather = response.data["weather"][0]["description"];
+                let weather = response.data["weather"][0]["description"];
                 currentState.weather = weather;
                 updateSky(weather);
             })
             .catch((error) => {
-                console.log(`error getting weather from coors for ${currentState.city}`)
-                console.log(`coodinates are ${currentState.latitude} and ${currentState.longitude}`)
+                console.log(`error getting weather from coors for ${currentState.city}`);
+                console.log(`coodinates are ${currentState.latitude} and ${currentState.longitude}`);
+                console.log(error);
             })
     }
 
