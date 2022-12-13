@@ -94,7 +94,7 @@ const updateTemp = (temp) => {
     const currentTemp = document.getElementById('temp');
     currentState.temp = temp
     currentTemp.textContent = `${Math.floor(temp)}°`
-    tempColor = findTempColor();
+    let tempColor = findTempColor();
     currentTemp.style.color = tempColor;
     updateLandscape(temp);
 }
