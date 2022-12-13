@@ -23,6 +23,7 @@ const getWeatherFromCity = () => {
             currentState.latitude = response.data[0]['lat'];
             currentState.longitude = response.data[0]['lon'];
             console.log(`getting weather for ${currentState.city}`)
+            console.log(`setting coords as ${currentState.latitude} and ${currentState.longitude}`)
             // call the other api
             getWeatherFromCoords();
 
@@ -56,6 +57,7 @@ const getWeatherFromCity = () => {
             })
             .catch((error) => {
                 console.log(`error getting weather from coors for ${currentState.city}`)
+                console.log(`coodinates are ${currentState.latitude} and ${currentState.longitude}`)
             })
     }
 
