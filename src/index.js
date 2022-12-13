@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime';
+import axios from 'axios';
 
 
 const currentState = {
@@ -12,7 +14,7 @@ const currentState = {
 ////////// API calls //////////
 const getWeatherFromCity = () => {
     axios
-        .get(`http://localhost:5000/location`, {
+        .get(`https://caitlyns-weather-report.herokuapp.com/location`, {
             params: {
                 q: currentState.city
             },
@@ -34,7 +36,7 @@ const getWeatherFromCity = () => {
 
     const getWeatherFromCoords = () => {
         axios 
-            .get(`http://localhost:5000/weather`, {
+            .get(`https://caitlyns-weather-report.herokuapp.com/weather`, {
                 params: {
                     lat: currentState.latitude,
                     lon: currentState.longitude
