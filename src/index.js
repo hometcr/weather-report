@@ -191,12 +191,14 @@ const registerEventHandlers = () => {
 
     // update sky when drop-down selection is changed (wave 5)
     const skyOptions = document.getElementById("sky_options")
+    let changeSky;
     skyOptions.addEventListener('change', changeSky = (event) => {
         updateSky(event.target.value)
     })
     
     // update page when mag glass is clicked
     const magGlass = document.getElementById("mag_glass")
+    let updatePage;
     magGlass.addEventListener('click', updatePage = () => {
         let newCity
         // if search bar is empty, reset page for current city (wave 6)
