@@ -162,13 +162,13 @@ const updateSky = (weather) => {
 const updateLandscape = (temp) => {
     const currentLandscape = document.getElementById('landscape_photo');
     if (temp < 40) {
-        currentLandscape.src = "assets/snowy-landscape.jpg"
+        currentLandscape.src = "https://github.com/hometcr/weather-report/blob/main/assets/snowy-landscape.jpg?raw=true"
     } else if (temp < 75) {
-        currentLandscape.src = "assets/green-landscape.jpg"
+        currentLandscape.src = "https://github.com/hometcr/weather-report/blob/main/assets/green-landscape.jpg?raw=true"
     } else if (temp < 90) {
-        currentLandscape.src = "assets/beach-landscape.jpg"
+        currentLandscape.src = "https://github.com/hometcr/weather-report/blob/main/assets/beach-landscape.jpg?raw=true"
     } else {
-        currentLandscape.src = "assets/desert-landscape.jpg"
+        currentLandscape.src = "https://github.com/hometcr/weather-report/blob/main/assets/desert-landscape.jpg?raw=true"
     }
 }
 
