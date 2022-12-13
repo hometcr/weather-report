@@ -91,7 +91,7 @@ const updateCity = (city) => {
 
 
 const updateTemp = (temp) => {
-    const currentTemp = document.getElementById('temp');
+    let currentTemp = document.getElementById('temp');
     currentState.temp = temp
     currentTemp.textContent = `${Math.floor(temp)}°`
     let tempColor = findTempColor();
@@ -121,16 +121,16 @@ const findTempColor = () => {
 
 
 const raiseTemp = () => {
-    currentTemp = currentState.temp
-    newTemp = temp + 1;
+    let currentTemp = currentState.temp
+    let newTemp = temp + 1;
     currentState.temp = newTemp
     updateTemp(newTemp)
 }
 
 
 const lowerTemp = () => {
-    currentTemp = currentState.temp
-    newTemp = temp - 1;
+    let currentTemp = currentState.temp
+    let newTemp = temp - 1;
     currentState.temp = newTemp
     updateTemp(newTemp);
 }
@@ -140,20 +140,20 @@ const updateSky = (weather) => {
     const currentSky = document.getElementById('sky_photo')
     if (weather.includes("snow")) {
         currentState.weather = "snowy"
-        currentSky.src = "assets/snowy-sky.jpg"
+        currentSky.src = "https://github.com/hometcr/weather-report/blob/deployment/assets/snowy-sky.jpg?raw=true"
         // update drop-down selection automatically
         selectElement("sky_options", "snowy");
     } else if (weather.includes("cloud")) {
         currentState.weather = "cloudy"
-        currentSky.src = "assets/cloudy-sky.jpg"
+        currentSky.src = "https://github.com/hometcr/weather-report/blob/deployment/assets/cloudy-sky.jpg?raw=true"
         selectElement("sky_options", "cloudy");
     } else if (weather.includes("rain") || weather.includes("storm")) {
         currentState.weather = "rainy"
-        currentSky.src = "assets/stormy-sky.jpg"
+        currentSky.src = "https://github.com/hometcr/weather-report/blob/deployment/assets/stormy-sky.jpg?raw=true"
         selectElement("sky_options", "rainy");
     } else {
         currentState.weather = "sunny"
-        currentSky.src = "assets/sunny-sky.jpg"
+        currentSky.src = "https://github.com/hometcr/weather-report/blob/deployment/assets/sunny-sky.jpg?raw=true"
         selectElement("sky_options", "sunny");
     }
 }
